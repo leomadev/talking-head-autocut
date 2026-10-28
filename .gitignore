@@ -1,0 +1,39 @@
+# Media & Large Files
+*.mov
+*.mp4
+*.m4v
+*.avi
+*.mkv
+*.wav
+*.aac
+*.mp3
+
+# Personal Voice Profile (User-specific biometric embedding)
+resources/my_voice_profile.npy
+
+# Work Directories & Caches
+*_work/
+audio_work/
+video1_work/
+step3_chunks/
+step2_whisper/
+__pycache__/
+*.py[cod]
+.venv/
+.env
+
+# OS / Editor Files
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+.idea/
+.vscode/
+
+# Test video work folders
+test_video/work/
+test_video/cases/work*/
+test_video/*.mp4
+test_video/*.mov
+test_video/cases/*.mp4
+test_video/cases/*.mov
