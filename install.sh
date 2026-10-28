@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-SKILL_NAME="ai-talking-head-editor"
+SKILL_NAME="talking-head-autocut"
 TARGET_DIR="${HOME}/.gemini/config/skills/${SKILL_NAME}"
 REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 

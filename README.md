@@ -1,9 +1,9 @@
-# AI Talking-Head Auto-Editor
+# Talking-Head AutoCut
 
 > [!IMPORTANT]
 > **Exclusive Focus**: This tool is **strictly built for solo talking-head video recordings** (vlogs, video essays, educational monologues, YouTube talking-head videos). It is intentionally **not** a general-purpose silence remover or multi-person podcast editor.
 
-An automated 3-step video editing skill for solo talking-head recordings.
+An automated 3-step video editing skill for solo talking-head recordings. 
 
 Designed for creators who rehearse sentences multiple times, check phone dictionaries/translators mid-take, and want an export-ready 1080p MP4 without requiring manual NLE cutting (Premiere, Final Cut) or paid cloud tools (CapCut Pro).
 
@@ -69,12 +69,12 @@ flowchart TD
 Clone the repository and run the install script:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/ai-talking-head-editor.git
-cd ai-talking-head-editor
+git clone https://github.com/YOUR_USERNAME/talking-head-autocut.git
+cd talking-head-autocut
 ./install.sh
 ```
 
-This creates a symlink at `~/.gemini/config/skills/ai-talking-head-editor`, making the skill available inside Google Antigravity (`agy`).
+This creates a symlink at `~/.gemini/config/skills/talking-head-autocut`, making the skill available inside Google Antigravity (`agy`).
 
 ---
 
@@ -83,7 +83,7 @@ This creates a symlink at `~/.gemini/config/skills/ai-talking-head-editor`, maki
 ### 1. In Antigravity CLI / IDE
 Simply ask Antigravity:
 ```text
-Use ai-talking-head-editor to edit /path/to/my_recording.mov
+Use talking-head-autocut to edit /path/to/my_recording.mov
 ```
 
 ### 2. Manual Terminal Commands
@@ -112,7 +112,7 @@ python3 scripts/step3_render_mp4.py audio_work/step3_final_edl.json input_video.
 ## Repository Structure
 
 ```text
-ai-talking-head-editor/
+talking-head-autocut/
 ├── README.md               # Documentation & usage guide
 ├── SKILL.md                # Antigravity agent skill definition
 ├── LICENSE                 # MIT License

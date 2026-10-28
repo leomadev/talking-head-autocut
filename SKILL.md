@@ -1,5 +1,5 @@
 ---
-name: ai-talking-head-editor
+name: talking-head-autocut
 description: >-
   Automated 3-step video editing skill for solo talking-head recordings.
   Step 1 removes non-user sounds (Google Translate TTS, phone notifications, other speakers)
@@ -10,7 +10,7 @@ description: >-
   requiring CapCut Pro or manual NLE tools.
 ---
 
-# AI Talking-Head Auto-Editor (3-Step Pipeline)
+# Talking-Head AutoCut (3-Step Pipeline)
 
 Use this skill whenever the user wants to edit, clip, or clean up a raw talking-head video recording into a coherent, finished MP4 video.
 
@@ -63,7 +63,7 @@ Use this skill whenever the user wants to edit, clip, or clean up a raw talking-
 Run `step1_voice_gate.py` using `uv run --with "resemblyzer"`:
 
 ```bash
-SKILL_DIR="$HOME/.gemini/config/skills/ai-talking-head-editor"
+SKILL_DIR="$HOME/.gemini/config/skills/talking-head-autocut"
 uv run --with "resemblyzer" python3 "$SKILL_DIR/scripts/step1_voice_gate.py" "<INPUT_VIDEO>" "audio_work"
 ```
 
@@ -80,7 +80,7 @@ uv run --with "resemblyzer" python3 "$SKILL_DIR/scripts/step1_voice_gate.py" "<I
 Run `step2_transcribe.py` (uses `uvx --from mlx-whisper` on Metal GPU):
 
 ```bash
-SKILL_DIR="$HOME/.gemini/config/skills/ai-talking-head-editor"
+SKILL_DIR="$HOME/.gemini/config/skills/talking-head-autocut"
 python3 "$SKILL_DIR/scripts/step2_transcribe.py" "audio_work"
 ```
 
@@ -108,7 +108,7 @@ python3 "$SKILL_DIR/scripts/step2_transcribe.py" "audio_work"
 2. **Render the Final Video**:
 
 ```bash
-SKILL_DIR="$HOME/.gemini/config/skills/ai-talking-head-editor"
+SKILL_DIR="$HOME/.gemini/config/skills/talking-head-autocut"
 python3 "$SKILL_DIR/scripts/step3_render_mp4.py" "audio_work/step3_final_edl.json" "<INPUT_VIDEO>" "<OUTPUT_MP4>" "audio_work"
 ```
 
