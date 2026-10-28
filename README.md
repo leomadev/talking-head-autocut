@@ -1,8 +1,18 @@
 # AI Talking-Head Auto-Editor
 
-An automated 3-step video editing skill for solo talking-head recordings. 
+> [!IMPORTANT]
+> **Exclusive Focus**: This tool is **strictly built for solo talking-head video recordings** (vlogs, video essays, educational monologues, YouTube talking-head videos). It is intentionally **not** a general-purpose silence remover or multi-person podcast editor.
+
+An automated 3-step video editing skill for solo talking-head recordings.
 
 Designed for creators who rehearse sentences multiple times, check phone dictionaries/translators mid-take, and want an export-ready 1080p MP4 without requiring manual NLE cutting (Premiere, Final Cut) or paid cloud tools (CapCut Pro).
+
+### Why a Talking-Head-Specific Architecture?
+
+Generic auto-cutters (like simple dB-threshold silence strippers) fail on real-world solo recordings because:
+1. **Phone Audio & Background Sounds**: When a creator taps Google Translate on their phone or gets a notification chime, simple silence cutters leave the foreign audio in the video. This tool uses a **permanent 256-dim acoustic voice fingerprint** to verify that every syllable belongs to the creator before Whisper ever transcribes it.
+2. **Multiple Takes & Rehearsals**: Creators often try a sentence 2–5 times, rehearse single tricky words, or stop mid-sentence to think. Generic cutters keep all takes and create chaotic, breathless jump-cuts. This tool uses an LLM-assisted Edit Decision List (EDL) to **always keep only the last clean take** and discard isolated vocabulary drills.
+3. **Natural Human Pacing**: Instead of robotic, breathless jump-cuts, it preserves human breathing room (`0.25s–0.35s`) at sentence endings with micro-fades and linear volume boost.
 
 ```mermaid
 flowchart TD
