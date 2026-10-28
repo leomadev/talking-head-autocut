@@ -69,7 +69,7 @@ flowchart TD
 Clone the repository and run the install script:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/talking-head-autocut.git
+git clone https://github.com/leomadev/talking-head-autocut.git
 cd talking-head-autocut
 ./install.sh
 ```
